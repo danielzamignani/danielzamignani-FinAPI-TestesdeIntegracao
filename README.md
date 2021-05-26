@@ -1,14 +1,12 @@
 # 💻 Sobre o desafio
 
-Nesse desafio, você deverá criar testes unitários para uma aplicação já pronta usando tudo que aprendeu até agora sobre testes.
+Nesse desafio, você deverá criar testes de integração para a mesma aplicação usada no [desafio anterior](https://www.notion.so/Desafio-01-Testes-unit-rios-0321db2af07e4b48a85a1e4e360fcd11).
 
-Para que você possa focar somente na parte de testes unitários sem precisar estudar muito a aplicação do zero, o template foi desenvolvido com base em uma aplicação já conhecida: **FinAPI**. A API construída no primeiro módulo da trilha.
+Você pode inclusive fazer as alterações no mesmo repositório submetido no desafio de testes unitários e submetê-lo na plataforma.
 
 ## Template da aplicação
 
-Para te ajudar nesse desafio, criamos para você esse modelo que você deve utilizar como um template do GitHub.
-
-O template está disponível na seguinte URL: 
+Se você prefere criar um novo repositório para esse desafio, aqui está o link para o template:
 
 [rocketseat-education/ignite-template-tests-challenge](https://github.com/rocketseat-education/ignite-template-tests-challenge)
 
@@ -16,9 +14,11 @@ O template está disponível na seguinte URL:
 
 ## Banco de dados
 
-Se você quiser testar a aplicação usando o Insomnia para ver o funcionamento até mesmo como auxílio para criar os testes unitários, é importante que você confira os dados de autenticação do banco no arquivo `ormconfig.json` e, se necessário, altere. 
+Para ter o funcionamento normal da aplicação durante os testes de integração é importante que você confira os dados de autenticação do banco no arquivo `ormconfig.json` e, se necessário, altere. 
 
-Além disso você precisa criar uma database com o nome `fin_api` de acordo com o que está no arquivo de configurações do TypeORM.
+Além disso você precisa criar uma database com o nome `fin_api` de acordo com o que está no arquivo de configurações do TypeORM antes de rodar as migrations.
+
+Se você quiser usar um banco específico somente para os testes, sinta-se livre para criar a sua própria configuração de conexão no arquivo `src/database/index.ts`. Isso não irá afetar a correção do seu desafio 🚀
 
 ## Rotas da aplicação
 
@@ -53,9 +53,3 @@ A rota recebe um token JWT pelo header e `amount` e `description` no corpo da re
 ### GET `/api/v1/statements/:statement_id`
 
 A rota recebe um token JWT pelo header e o id de uma operação registrada (saque ou depósito) na URL da rota e retorna as informações da operação encontrada.
-
-# 📅 Entrega
-
-Esse desafio deve ser entregue a partir da plataforma da Rocketseat. Envie o link do repositório que você fez suas alterações. Após concluir o desafio, além de ter mandado o código para o GitHub, fazer um post no Linkedin é uma boa forma de demonstrar seus conhecimentos e esforços para evoluir na sua carreira para oportunidades futuras.
-
-Feito com 💜 por Rocketseat 👋 Participe da nossa [comunidade aberta!](https://discord.gg/pUU3CG4Z)
